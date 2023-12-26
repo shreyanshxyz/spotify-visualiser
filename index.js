@@ -59,6 +59,7 @@ app.get("/callback", (req, res) => {
       code: code,
       redirect_uri: REDIRECT_URI,
     }),
+    // Request headers
     headers: {
       "content-type": "application/x-www-form-urlencoded",
       Authorization: `Basic ${new Buffer.from(
