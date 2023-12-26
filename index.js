@@ -47,11 +47,13 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/callback", (req, res) => {
+  // Our code queryparam
   const code = req.query.code || null;
 
   axios({
     method: "post",
     url: "https://accounts.spotify.com/api/token",
+    // Stringifying 3 required params
     data: querystring.stringify({
       grant_type: "authorization_code",
       code: code,
