@@ -5,17 +5,7 @@ const app = express();
 const port = 8888;
 
 app.get("/", (req, res) => {
-  const data = {
-    name: "Shreyansh",
-    isAwesome: true,
-  };
-
-  res.json(data);
-});
-
-app.get("/awesome-generator", (req, res) => {
-  const { name, isAwesome } = req.query;
-  res.send(`${name} is ${JSON.parse(isAwesome) ? "really" : "not"} awesome`);
+  "It's Working";
 });
 
 app.listen(port, () => {
